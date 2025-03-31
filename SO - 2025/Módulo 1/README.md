@@ -17,21 +17,21 @@ Os programas devem ser compilados antes da execução. Para compilar os códigos
 ```bash
 gcc -o modulo_1_exemplo_1 modulo_1_exemplo_1.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_2.c
+gcc -o modulo_1_exemplo_2 modulo_1_exemplo_2.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_3.c
+gcc -o modulo_1_exemplo_3 modulo_1_exemplo_3.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_4.c
+gcc -o modulo_1_exemplo_4 modulo_1_exemplo_4.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_5.c
+gcc -o modulo_1_exemplo_5 modulo_1_exemplo_5.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_6.c
+gcc -o modulo_1_exemplo_6 modulo_1_exemplo_6.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_7.c
+gcc -o modulo_1_exemplo_7 modulo_1_exemplo_7.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_8.c
+gcc -o modulo_1_exemplo_8 modulo_1_exemplo_8.c
 
-gcc -o modulo_2_exemplo_2 modulo_2_exemplo_9.c
+gcc -o modulo_1_exemplo_9 modulo_1_exemplo_9.c
 ```
 
 ## Execução com `strace`
@@ -41,21 +41,21 @@ A ferramenta `strace` será utilizada para capturar todas as chamadas de sistema
 ```bash
 strace ./modulo_1_exemplo_1
 
-strace ./modulo_2_exemplo_2
+strace ./modulo_1_exemplo_2
 
-strace ./modulo_2_exemplo_3
+strace ./modulo_1_exemplo_3
 
-strace ./modulo_2_exemplo_4
+strace ./modulo_1_exemplo_4
 
-strace ./modulo_2_exemplo_5
+strace ./modulo_1_exemplo_5
 
-strace ./modulo_2_exemplo_6
+strace ./modulo_1_exemplo_6
 
-strace ./modulo_2_exemplo_7
+strace ./modulo_1_exemplo_7
 
-strace ./modulo_2_exemplo_8
+strace ./modulo_1_exemplo_8
 
-strace ./modulo_2_exemplo_9
+strace ./modulo_1_exemplo_9
 ```
 
 ## Execução com `time`
@@ -65,19 +65,19 @@ Para medir o tempo de execução e outras estatísticas, utilize o seguinte coma
 ```bash
 time ./modulo_1_exemplo_1
 
-time ./modulo_2_exemplo_2
+time ./modulo_1_exemplo_2
 
-time ./modulo_2_exemplo_3
+time ./modulo_1_exemplo_3
 
-time ./modulo_2_exemplo_4
+time ./modulo_1_exemplo_4
 
-time ./modulo_2_exemplo_5
+time ./modulo_1_exemplo_5
 
-time ./modulo_2_exemplo_6
+time ./modulo_1_exemplo_6
 
-time ./modulo_2_exemplo_7
+time ./modulo_1_exemplo_7
 
-time ./modulo_2_exemplo_8
+time ./modulo_1_exemplo_8
 
-time ./modulo_2_exemplo_9
+time ./modulo_1_exemplo_9
 ```
