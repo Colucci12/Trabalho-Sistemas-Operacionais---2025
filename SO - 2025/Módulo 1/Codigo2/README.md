@@ -59,9 +59,9 @@ O programa `modulo_2_exemplo_2` realiza operações de memória compartilhada e 
 
 Para interpretar os outputs gerados pelas ferramentas `strace` e `time`, considere:
 
-- **`strace -T ./modulo_2_exemplo_2`**: Exibe todas as chamadas de sistema invocadas pelo programa `modulo_2_exemplo_2`, juntamente com o tempo gasto em cada uma. Útil para identificar quais operações consomem mais tempo.
+- **`strace`**: Exibe todas as chamadas de sistema invocadas pelo programa `modulo_2_exemplo_2`, juntamente com o tempo gasto em cada uma. Útil para identificar quais operações consomem mais tempo.
 
-- **`time ./modulo_2_exemplo_2`**: Fornece estatísticas sobre o tempo total de execução, tempo em modo usuário, tempo em modo kernel e outras métricas. Auxilia na determinação se o programa é CPU-bound ou I/O-bound.
+- **`time`**: Fornece estatísticas sobre o tempo total de execução, tempo em modo usuário, tempo em modo kernel e outras métricas. Auxilia na determinação se o programa é CPU-bound ou I/O-bound.
 
 Ao analisar os outputs, observe:
 

@@ -59,9 +59,9 @@ O programa `modulo_1_exemplo_1` realiza operações básicas de E/S e manipulaç
 
 Para interpretar os outputs gerados pelas ferramentas `strace` e `time`, considere:
 
-- **`strace -T ./modulo_1_exemplo_1`**: Exibe todas as chamadas de sistema invocadas pelo programa `modulo_1_exemplo_1`, juntamente com o tempo gasto em cada uma. Útil para identificar quais operações consomem mais tempo.
+- **`strace`**: Exibe todas as chamadas de sistema invocadas pelo programa `modulo_1_exemplo_1`, juntamente com o tempo gasto em cada uma. Útil para identificar quais operações consomem mais tempo.
 
-- **`time ./modulo_1_exemplo_1`**: Fornece estatísticas sobre o tempo total de execução, tempo em modo usuário, tempo em modo kernel e outras métricas. Auxilia na determinação se o programa é CPU-bound ou I/O-bound.
+- **`time`**: Fornece estatísticas sobre o tempo total de execução, tempo em modo usuário, tempo em modo kernel e outras métricas. Auxilia na determinação se o programa é CPU-bound ou I/O-bound.
 
 Ao analisar os outputs, observe:
 
