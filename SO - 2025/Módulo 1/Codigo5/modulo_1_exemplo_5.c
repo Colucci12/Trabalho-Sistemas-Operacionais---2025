@@ -1,52 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+#include <fcntl.h>
+#include <string.h>
 
-void child_process() {
-    printf("Processo filho (PID: %d) iniciado\n", getpid());
-    
-    printf("Filho: encerrando...\n");
-    
-    printf("Filho: terminando com status 42\n");
-    // chamada de sistema exit() com status 42
-    exit(42);
-}
+#define BUFFER_SIZE 1024
 
-void parent_process(pid_t pid) {
-    printf("Processo pai (PID: %d) aguardando filho (PID: %d)...\n", getpid(), pid);
-    
-    int status;
-    // espera pelo filho
-    waitpid(pid, &status, 0);
-    
-    if (WIFEXITED(status)) {
-        printf("Pai: filho terminou com status %d\n", WEXITSTATUS(status));
-    } else {
-        printf("Pai: filho terminou anormalmente\n");
-    }
-    
-    printf("Pai: terminando com status 0\n");
-    // chamada de sistema exit() com status 0
-    exit(0);
-}
+int main() {
+    int fd;
+    char buffer[BUFFER_SIZE];
+    ssize_t bytes_read;
 
-int main() {    
-    pid_t pid = fork();
-    
-    if (pid == -1) {
-        perror("fork falhou");
-        return EXIT_FAILURE;
+    // abrindo o arquivo /etc/os-release para leitura (infos do sistema)
+    fd = open("/etc/os-release", O_RDONLY);
+    if (fd == -1) {
+        perror("Erro ao abrir arquivo");
+        exit(EXIT_FAILURE);
     }
-    
-    if (pid == 0) {
-        child_process();
-    } else {
-        parent_process(pid);
+
+    // fazendo a leitura do arquivo
+    printf("Lendo conteudo do arquivo...\n\n");
+    while ((bytes_read = read(fd, buffer, BUFFER_SIZE - 1)) > 0) {
+        buffer[bytes_read] = '\0'; // Adiciona terminador nulo
+        printf("%s", buffer);
     }
-    
-    // nunca vai chegar nessa parte do codigo, pois é feita a chamada exit()
-    printf("Esta mensagem nunca aparecerá\n");
-    return 0;
+
+    // verificacao caso haja erros de leitura
+    if (bytes_read == -1) {
+        perror("Erro na leitura");
+        close(fd);
+        exit(EXIT_FAILURE);
+    }
+
+    // close no arquivo e quit do programa
+    close(fd);
+    printf("\n\nLeitura concluída com sucesso!\n");
+    return EXIT_SUCCESS;
 }

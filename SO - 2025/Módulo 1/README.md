@@ -24,14 +24,6 @@ gcc -o modulo_1_exemplo_3 modulo_1_exemplo_3.c
 gcc -o modulo_1_exemplo_4 modulo_1_exemplo_4.c
 
 gcc -o modulo_1_exemplo_5 modulo_1_exemplo_5.c
-
-gcc -o modulo_1_exemplo_6 modulo_1_exemplo_6.c
-
-gcc -o modulo_1_exemplo_7 modulo_1_exemplo_7.c
-
-gcc -o modulo_1_exemplo_8 modulo_1_exemplo_8.c
-
-gcc -o modulo_1_exemplo_9 modulo_1_exemplo_9.c
 ```
 
 ## Execução com `strace`
@@ -48,14 +40,6 @@ strace ./modulo_1_exemplo_3
 strace ./modulo_1_exemplo_4
 
 strace ./modulo_1_exemplo_5
-
-strace ./modulo_1_exemplo_6
-
-strace ./modulo_1_exemplo_7
-
-strace ./modulo_1_exemplo_8
-
-strace ./modulo_1_exemplo_9
 ```
 
 ## Execução com `time`
@@ -72,12 +56,4 @@ time ./modulo_1_exemplo_3
 time ./modulo_1_exemplo_4
 
 time ./modulo_1_exemplo_5
-
-time ./modulo_1_exemplo_6
-
-time ./modulo_1_exemplo_7
-
-time ./modulo_1_exemplo_8
-
-time ./modulo_1_exemplo_9
 ```
